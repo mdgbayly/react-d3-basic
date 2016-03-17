@@ -56,7 +56,7 @@ module.exports =  React.createClass({
       series: chartSeries
     }
   },
-  onClick: function() {
+  onButtonClick: function() {
     this.setState({
       width: this.state.width === 600? 500: 600,
       height: this.state.width === 600? 600: 500,
@@ -83,11 +83,20 @@ module.exports =  React.createClass({
         ]: chartSeries
     })
   },
+  onMouseOver: function(e) {
+    console.log(e)
+  },
+  onMouseOut: function(e) {
+    console.log(e)
+  },
+  onClick: function(e, data) {
+    console.log(e, data)
+  },
   render: function() {
 
     return (
       <div>
-        <button onClick={this.onClick}>toggle</button>
+        <button onClick={this.onButtonClick}>toggle</button>
         <BarStackChart
           width= {this.state.width}
           height= {this.state.height}
@@ -97,6 +106,9 @@ module.exports =  React.createClass({
           xScale= {xScale}
           y= {y}
           yTickFormat= {yTickFormat}
+          onMouseOver= {this.onMouseOver}
+          onMouseOut= {this.onMouseOut}
+          onClick= {this.onClick}
         />
       </div>
     )

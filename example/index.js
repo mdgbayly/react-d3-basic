@@ -17,11 +17,12 @@ import BarNegative from './src/bar_negative'
 import BarStack from './src/bar_stack'
 import BarStackHorizontal from './src/bar_stack_horizontal'
 import BarStackNegative from './src/bar_stack_negative'
+import Pie from './src/pie'
 
 // Declarative route configuration (could also load this config lazily
 // instead, all you really need is a single root route, you don't need to
 // colocate the entire config).
-        
+
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/example" component={Container}>
@@ -39,6 +40,7 @@ ReactDOM.render((
       <Route path="bar_stack" component={BarStack}/>
       <Route path="bar_stack_horizontal" component={BarStackHorizontal}/>
       <Route path="bar_stack_negative" component={BarStackNegative}/>
+      <Route path="pie" component={Pie}/>
     </Route>
   </Router>
   ), document.getElementById('root')

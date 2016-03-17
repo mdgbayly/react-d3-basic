@@ -30,6 +30,7 @@ export default class BarStackChart extends Component {
   static defaultProps = {
     onMouseOver: () => {},
     onMouseOut: () => {},
+    onClick: () => {},
     ...CommonProps
   }
 

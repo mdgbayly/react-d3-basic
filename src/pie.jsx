@@ -22,7 +22,8 @@ export default class PieChart extends Component {
 
   static defaultProps = {
     onMouseOver: () => {},
-    onMouseOut: () => {}
+    onMouseOut: () => {},
+    onClick: () => {}
   }
 
   static propTypes = {

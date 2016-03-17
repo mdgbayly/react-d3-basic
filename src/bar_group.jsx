@@ -30,6 +30,7 @@ export default class BarGroupChart extends Component {
   static defaultProps = {
     onMouseOver: () => {},
     onMouseOut: () => {},
+    onClick: () => {},
     ...CommonProps
   }
 
